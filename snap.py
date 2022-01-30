@@ -17,12 +17,13 @@ from sentinelsat import SentinelAPI, read_geojson, geojson_to_wkt
 from datetime import date
 api = SentinelAPI('iserra', 'Creaf-21', 'https://scihub.copernicus.eu/dhus')
 import rioxarray
+import json
 
 #fileBbox = bboxgeo   #geojosn file closed linestring
 bboxgeo = sys.argv[1]
 #fileTemporal = sys.argv[2]   #txt file
 print (bboxgeo)
-
+fileBbox = bboxgeo 
 ARG=json.load(open("vlabparams.json","r"))
 
 print(str(ARG['bbox'][0])) #1
