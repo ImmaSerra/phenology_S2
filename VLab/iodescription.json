@@ -43,25 +43,5 @@
         "valueSchema": "bbox",
         "target": "bbox_l"
     }
-  ],
-  "outputs": [
-    {
-      "id": "ndvi.tif",
-      "outputType": "individual",
-      "valueType": "value",
-      "description": "Output NDVI image in TIFF format",
-      "name": "Output image in TIFF format",
-      "valueSchema": "url",
-      "target": "ndvi_output.tif"
-    },
-    {
-      "id": "output.txt",
-      "outputType": "individual",
-      "valueType": "value",
-      "description": "The output file",
-      "name": "Output.txt",
-      "valueSchema": "url",
-      "target": "./output.txt"
-    }
   ]
 }
