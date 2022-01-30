@@ -19,6 +19,7 @@ api = SentinelAPI('iserra', 'Creaf-21', 'https://scihub.copernicus.eu/dhus')
 import rioxarray
 
 #fileBbox = bboxgeo   #geojosn file closed linestring
+bboxgeo = sys.argv[1]
 #fileTemporal = sys.argv[2]   #txt file
 print (bboxgeo)
 

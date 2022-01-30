@@ -6,8 +6,8 @@
       "pathType": "FILE"
  },
  {
-   "repoPath": "S2_calc.py",
-   "targetPath": "S2_calc.py",
+   "repoPath": "snap.py",
+   "targetPath": "snap.py",
    "pathType": "FILE"
  }
   ]
