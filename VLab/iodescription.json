@@ -8,7 +8,8 @@
       "name": "Data start",
       "obligation": true,
       "hasDefault": false,
-      "valueSchema": "string_parameter"
+      "valueSchema": "string_parameter",
+      "target": "start"
    },
     {
       "id": "data2",
@@ -18,7 +19,8 @@
       "name": "Data end",
       "obligation": true,
       "hasDefault": false,
-      "valueSchema": "string_parameter"
+      "valueSchema": "string_parameter",
+      "target": "end"
     },
     {
       "id": "DataObject_0h3a3ff",

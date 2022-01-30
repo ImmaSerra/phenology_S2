@@ -23,15 +23,25 @@ import json
 bboxgeo = sys.argv[1]
 #fileTemporal = sys.argv[2]   #txt file
 print (bboxgeo)
-fileBbox = bboxgeo 
+fileBbox = bboxgeo
 ARG=json.load(open("vlabparams.json","r"))
 
-print(str(ARG['bbox'][0])) #1
-print(str(ARG['bbox'].split(","))) #['19.1031', ' 64.0410', ' 19.8981', '64.4038']
+print(str(ARG)) #f
+arg=""
+for k,v in ARG.items():
+    if (v is False)|(v in ["False","false","F"]):
+        continue
+    else:
+        if (v is True)|(v=="true"):
+            #v=""
+            v="true"
+        arg+=" -- "+" ".join([k,str(v)])
+print(arg)
+#print(str(ARG['bbox'].split(","))) #[false]
 
-print(str(ARG['bbox'])) #19.1031, 64.0410, 19.8981,64.4038
-dates[0]=ARG['bbox'].split(",")[0]
-dates[1]=ARG['bbox'].split(",")[1]
+#print(str(ARG['bbox'])) #19.1031, 64.0410, 19.8981,64.4038
+#dates[0]=ARG['bbox'].split(",")[0]
+#dates[1]=ARG['bbox'].split(",")[1]
 
 """
 with open(fileTemporal) as f:
@@ -40,8 +50,8 @@ with open(fileTemporal) as f:
     dates = contents.split(",")
     print(dates)
 """
-print(dates[0])
-print(dates[1])
+#print(arg[0])
+#print(dates[1])
 
 
 output = "output.txt"
