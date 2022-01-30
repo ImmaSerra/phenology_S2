@@ -41,6 +41,11 @@ with open(fileTemporal) as f:
 print(dates[0])
 print(dates[1])
 
+
+output = "output.txt"
+with open(output, "w") as outputfile:
+    outputfile.write('hola')
+
 """
 footprint = geojson_to_wkt(read_geojson(fileBbox))
 products = api.query(footprint,
