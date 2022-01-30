@@ -1,0 +1,67 @@
+{
+  "inputs": [
+    {
+      "id": "data1",
+      "inputType": "individual",
+      "valueType": "value",
+      "description": "Sensing Start Time",
+      "name": "Data start",
+      "obligation": true,
+      "hasDefault": false,
+      "valueSchema": "string_parameter"
+   },
+    {
+      "id": "data2",
+      "inputType": "individual",
+      "valueType": "value",
+      "description": "Sensing Stop Time",
+      "name": "Data end",
+      "obligation": true,
+      "hasDefault": false,
+      "valueSchema": "string_parameter"
+    },
+    {
+      "id": "DataObject_0h3a3ff",
+      "inputType": "individual",
+      "valueType": "value",
+      "description": "URL to geojson",
+      "name": "BBoX",
+      "obligation": false,
+      "hasDefault": false,
+      "valueSchema": "url",
+      "target": "bboxgeo"
+    },
+    {
+        "id": "bbox",
+        "inputType": "individual",
+        "valueType": "value",
+        "description": "Bounding Box (numbers separated by commas: west,south,east,north)",
+        "name": "Bounding Box ",
+        "obligation": false,
+        "hasDefault": true,
+        "defaultValue": false,
+        "valueSchema": "bbox",
+        "target": "bbox_l"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ndvi.tif",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output NDVI image in TIFF format",
+      "name": "Output image in TIFF format",
+      "valueSchema": "url",
+      "target": "ndvi_output.tif"
+    },
+    {
+      "id": "output.txt",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "The output file",
+      "name": "Output.txt",
+      "valueSchema": "url",
+      "target": "./output.txt"
+    }
+  ]
+}
