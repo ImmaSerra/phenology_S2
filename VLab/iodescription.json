@@ -43,5 +43,16 @@
         "valueSchema": "bbox",
         "target": "bbox_l"
     }
+  ],
+  "outputs": [
+    {
+      "id": "output.txt",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "The output file",
+      "name": "Output.txt",
+      "valueSchema": "url",
+      "target": "./output.txt"
+    }
   ]
 }
