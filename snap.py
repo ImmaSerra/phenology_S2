@@ -23,7 +23,7 @@ import json
 bboxgeo = sys.argv[1]
 #fileTemporal = sys.argv[2]   #txt file
 
-fileBbox = bboxgeo
+#fileBbox = bboxgeo
 ARG=json.load(open("vlabparams.json","r"))
 
 """

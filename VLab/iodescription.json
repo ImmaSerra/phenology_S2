@@ -23,7 +23,7 @@
       "target": "end"
     },
     {
-      "id": "DataObject_0h3a3ff",
+      "id": "Databbox",
       "inputType": "individual",
       "valueType": "value",
       "description": "URL to geojson",
