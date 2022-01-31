@@ -22,7 +22,7 @@ import json
 #fileBbox = bboxgeo   #geojosn file closed linestring
 bboxgeo = sys.argv[1]
 #fileTemporal = sys.argv[2]   #txt file
-print (bboxgeo)
+
 fileBbox = bboxgeo
 ARG=json.load(open("vlabparams.json","r"))
 
@@ -69,13 +69,7 @@ with open(fileTemporal) as f:
 #print(arg[0])
 #print(dates[1])
 
-
-output = "output.txt"
-with open(output, "w") as outputfile:
-    outputfile.write('hola')
-
-"""
-footprint = geojson_to_wkt(read_geojson(fileBbox))
+footprint = geojson_to_wkt(read_geojson(bboxgeo))
 products = api.query(footprint,
                      date = (dates[0],dates[1]),
                      platformname = 'Sentinel-2',
@@ -88,4 +82,7 @@ print(len(products))
 for i in products:
     print (i,api.get_product_odata(i)['title'])
     #print (api.get_product_odata(i)['url'])
-"""
+
+output = "output.txt"
+with open(output, "w") as outputfile:
+    outputfile.write(len(products))
