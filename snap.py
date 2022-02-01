@@ -21,20 +21,17 @@ import json
 
 #fileBbox = bboxgeo   #geojosn file closed linestring
 
-bboxgeo = 'bboxgeo.json'
-#bboxgeo = sys.argv[1]
+#bboxgeo = 'bboxgeo.json'
+bboxgeo = sys.argv[1]
 #fileTemporal = sys.argv[2]   #txt file
 
-#fileBbox = bboxgeo
+fileBbox = bboxgeo
 ARG=json.load(open("vlabparams.json","r"))
 
 """
 bboxgeo
-
 {'data1': '20210101', 'data2': '20211231', 'bbox': 'false'}
-
 -- data1 20210101 -- data2 20211231
-
 """
 
 print(str(ARG)) #f
@@ -58,9 +55,7 @@ dates =[ARG['data1'],ARG['data2']]
 print(dates[0])
 print(dates[1])
 
-#footprint1 = geojson_to_wkt(read_geojson(str(fileBbox)))
-
-footprint = geojson_to_wkt(read_geojson(bboxgeo))
+footprint = geojson_to_wkt(read_geojson(fileBbox))
 
 print(footprint)
 """

@@ -1,5 +1,6 @@
 #!/bin/bash
 
 #less vlabparams.json
- 
-python snap.py bboxgeo.json
+mv bboxgeo.json bboxgeo
+
+python snap.py bboxgeo

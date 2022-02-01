@@ -32,7 +32,7 @@
       "hasDefault": false,
       "valueSchema": "url",
       "target": "bboxgeo.json"
-    },
+    }, 
     {
         "id": "bbox",
         "inputType": "individual",
