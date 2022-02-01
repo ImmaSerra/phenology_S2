@@ -22,10 +22,11 @@ import json
 #fileBbox = bboxgeo   #geojosn file closed linestring
 
 #bboxgeo = 'bboxgeo.json'
-bboxgeo = sys.argv[1]
+#bboxgeo = sys.argv[1]
+
 #fileTemporal = sys.argv[2]   #txt file
 
-fileBbox = bboxgeo
+fileBbox = read_geojson(bboxgeo.json)
 ARG=json.load(open("vlabparams.json","r"))
 
 """
@@ -55,7 +56,8 @@ dates =[ARG['data1'],ARG['data2']]
 print(dates[0])
 print(dates[1])
 
-footprint = geojson_to_wkt(read_geojson(fileBbox))
+footprint = geojson_to_wkt(fileBbox)
+#footprint = geojson_to_wkt(read_geojson(fileBbox))
 
 print(footprint)
 """
@@ -68,7 +70,7 @@ with open(fileTemporal) as f:
 #print(arg[0])
 #print(dates[1])
 
-footprint = geojson_to_wkt(read_geojson(fileBbox))
+footprint = geojson_to_wkt(read_geojson(bboxgeo.json))
 products = api.query(footprint,
                      date = (dates[0],dates[1]),
                      platformname = 'Sentinel-2',
