@@ -31,7 +31,7 @@
       "obligation": false,
       "hasDefault": false,
       "valueSchema": "url",
-      "target": "bboxgeo"
+      "target": "bboxgeo.json"
     },
     {
         "id": "bbox",
