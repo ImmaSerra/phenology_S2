@@ -56,8 +56,10 @@ dates =[ARG['data1'],ARG['data2']]
 print(dates[0])
 print(dates[1])
 
-footprint = geojson_to_wkt(read_geojson(fileBbox))
-#footprint = geojson_to_wkt(read_geojson(bboxgeo))
+footprint1 = geojson_to_wkt(read_geojson(str(fileBbox)))
+
+footprint = geojson_to_wkt(read_geojson(bboxgeo))
+print(footprint1)
 print(footprint)
 """
 with open(fileTemporal) as f:

@@ -2,4 +2,4 @@
 
 #less vlabparams.json
 
-python snap.py bboxgeo
+python snap.py bboxgeo.json
