@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #less vlabparams.json
-unzip bboxgeo.json bboxgeo
+mv bboxgeo.json bboxgeo
 echo 'hola'
 
 #python snap.py bboxgeo
