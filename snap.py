@@ -26,8 +26,21 @@ import json
 
 #fileTemporal = sys.argv[2]   #txt file
 
-fileBbox = read_geojson(bboxgeo)
-#ARG=json.load(open("vlabparams.json","r"))
+#fileBbox = read_geojson(bboxgeo)
+ARG=json.load(open("vlabparams.json","r"))
+print(str(ARG))
+
+for item in os.listdir(os.getcwd()):
+    print(item)
+
+#print(list.files(full.names=TRUE, recursive=TRUE))#
+#cat("\n\n## ------------------------------------------------------------------ ##\n\n")
+
+# Get command line values
+#args <- commandArgs(trailingOnly=TRUE)
+
+
+#https://www.tutorialspoint.com/python/python_command_line_arguments.htm
 
 """
 bboxgeo
@@ -52,10 +65,10 @@ dates =[ARG['data1'],ARG['data2']]
 print(dates[0])
 print(dates[1])
 """
-footprint = geojson_to_wkt(fileBbox)
+#footprint = geojson_to_wkt(fileBbox)
 #footprint = geojson_to_wkt(read_geojson(fileBbox))
 
-print(footprint)
+#print(footprint)
 """
 with open(fileTemporal) as f:
 #with open('input/dates.txt') as f:
