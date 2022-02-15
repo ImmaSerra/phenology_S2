@@ -26,13 +26,15 @@ import json
 
 #fileTemporal = sys.argv[2]   #txt file
 
-#fileBbox = read_geojson(bboxgeo)
+
 ARG=json.load(open("vlabparams.json","r"))
 print(str(ARG))
 
 for item in os.listdir(os.getcwd()):
-    print(item)
-
+    #print(item)
+    print(item[1])
+fileBbox = read_geojson(json.load(open("bboxgeo.json,"r")))
+print(fileBBox)
 #print(list.files(full.names=TRUE, recursive=TRUE))#
 #cat("\n\n## ------------------------------------------------------------------ ##\n\n")
 
