@@ -33,8 +33,11 @@ print(str(ARG))
 for item in os.listdir(os.getcwd()):
     #print(item)
     print(item[1])
-fileBbox = read_geojson(json.load(open("bboxgeo.json,"r")))
-print(fileBBox)
+fileBbox = read_geojson(json.load(open("bboxgeo.json","r")))
+print(fileBbox)
+
+fileBbox2 = read_geojson(json.load(open("bboxgeo.json","r")))
+print(fileBbox2)
 #print(list.files(full.names=TRUE, recursive=TRUE))#
 #cat("\n\n## ------------------------------------------------------------------ ##\n\n")
 
