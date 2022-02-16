@@ -55,7 +55,7 @@ bboxgeo
 {'data1': '20210101', 'data2': '20211231', 'bbox': 'false'}
 -- data1 20210101 -- data2 20211231
 """
-"""
+
 print(str(ARG)) #f
 arg=""
 for k,v in ARG.items():
@@ -72,7 +72,7 @@ print(arg)
 dates =[ARG['data1'],ARG['data2']]
 print(dates[0])
 print(dates[1])
-"""
+
 
 """
 with open(fileTemporal) as f:
@@ -81,9 +81,6 @@ with open(fileTemporal) as f:
     dates = contents.split(",")
     print(dates)
 """
-#print(arg[0])
-#print(dates[1])
-
 
 footprint = geojson_to_wkt(read_geojson('bboxgeo.json'))
 products = api.query(footprint,
