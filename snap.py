@@ -30,15 +30,14 @@ import json
 ARG=json.load(open("vlabparams.json","r"))
 print(str(ARG))
 
+list = []
 for item in os.listdir(os.getcwd()):
     #print(item)
-    print(item[1])
-#fileBbox = read_geojson(json.load(open("bboxgeo.json","r")))
-#print(fileBbox)
+    list.append(item)
+print(list[1])
 
-
-footprint = geojson_to_wkt(read_geojson('bboxgeo.json'))
-print(footprint)
+footprint0 = geojson_to_wkt(read_geojson('bboxgeo.json'))
+print(footprint0)
 
 fileBbox2 = read_geojson('bboxgeo.json')
 print(fileBbox2)
@@ -74,10 +73,7 @@ dates =[ARG['data1'],ARG['data2']]
 print(dates[0])
 print(dates[1])
 """
-#footprint = geojson_to_wkt(fileBbox)
-#footprint = geojson_to_wkt(read_geojson(fileBbox))
 
-#print(footprint)
 """
 with open(fileTemporal) as f:
 #with open('input/dates.txt') as f:
@@ -89,8 +85,7 @@ with open(fileTemporal) as f:
 #print(dates[1])
 
 
-"""
-footprint = geojson_to_wkt(read_geojson(bboxgeo))
+footprint = geojson_to_wkt(read_geojson('bboxgeo.json'))
 products = api.query(footprint,
                      date = (dates[0],dates[1]),
                      platformname = 'Sentinel-2',
@@ -103,8 +98,8 @@ print(len(products))
 for i in products:
     print (i,api.get_product_odata(i)['title'])
     #print (api.get_product_odata(i)['url'])
-"""
+
 output = "output.txt"
 with open(output, "w") as outputfile:
-    #outputfile.write(len(products))
-    outputfile.write('hola')
+    outputfile.write(len(products))
+    #outputfile.write('hola')
