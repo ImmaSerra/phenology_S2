@@ -98,5 +98,5 @@ for i in products:
 
 output = "output.txt"
 with open(output, "w") as outputfile:
-    outputfile.write(len(products))
+    outputfile.write(str(len(products)))
     #outputfile.write('hola')
