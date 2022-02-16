@@ -15,7 +15,7 @@ import xarray as xr
 import pandas as pd
 from sentinelsat import SentinelAPI, read_geojson, geojson_to_wkt
 from datetime import date
-api = SentinelAPI('iserra', 'Creaf-21', 'https://scihub.copernicus.eu/dhus')
+api = SentinelAPI(' ', '', 'https://scihub.copernicus.eu/dhus')
 import rioxarray
 import json
 
