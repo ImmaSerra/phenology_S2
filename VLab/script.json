@@ -9,6 +9,11 @@
    "repoPath": "snap.py",
    "targetPath": "snap.py",
    "pathType": "FILE"
+ },
+ {
+   "repoPath": "S2_Calc_2.py",
+   "targetPath": "S2_Calc_2.py",
+   "pathType": "FILE"
  }
   ]
 }

@@ -100,8 +100,7 @@ with open(output, "w") as outputfile:
         #print (api.get_product_odata(i)['url'])
         print (api.get_product_odata(i)['title'])
         #print (api.get_product_odata(i)['url'])
-        outputfile.write(str(api.get_product_odata(i)['title'])+'/n')
-
+        outputfile.write(str(api.get_product_odata(i)['title'])+'\n')
 
 #with open(output, "w") as outputfile:
 #    outputfile.write(str(len(products)))
