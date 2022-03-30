@@ -36,8 +36,8 @@ for item in os.listdir(os.getcwd()):
     list.append(item)
 print(list[1])
 
-footprint0 = geojson_to_wkt(read_geojson('bboxgeo.json'))
-print(footprint0)
+#footprint0 = geojson_to_wkt(read_geojson('bboxgeo.json'))
+#print(footprint0)
 
 fileBbox2 = read_geojson('bboxgeo.json')
 print(fileBbox2)
