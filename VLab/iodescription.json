@@ -27,12 +27,12 @@
       "inputType": "individual",
       "valueType": "value",
       "description": "URL to geojson",
-      "name": "BBoX",
+      "name": "BBox",
       "obligation": false,
       "hasDefault": false,
       "valueSchema": "url",
       "target": "bboxgeo.json"
-    }, 
+    },
     {
         "id": "bbox",
         "inputType": "individual",
@@ -55,6 +55,24 @@
       "name": "Output.txt",
       "valueSchema": "url",
       "target": "./output.txt"
-    }
+    },
+    {
+      "id": "imageSOS.tif",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output SOS image in TIFF format",
+      "name": "Output SOS image in TIFF format",
+      "valueSchema": "url",
+      "target": "sos.tif"
+    },
+    {
+      "id": "imagePOS.tif",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output POS image in TIFF format",
+      "name": "Output POS image in TIFF format",
+      "valueSchema": "url",
+      "target": "vsos.tif"
+    },
   ]
 }
