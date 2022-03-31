@@ -73,6 +73,6 @@
       "name": "Output POS image in TIFF format",
       "valueSchema": "url",
       "target": "vsos.tif"
-    },
+    }
   ]
 }
