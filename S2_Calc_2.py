@@ -29,13 +29,11 @@ from pathlib import Path
 from glob import glob
 
 #from utils.cog import write_cog
-
 #import urllib.request
 # connect to the API
 from sentinelsat import SentinelAPI, read_geojson, geojson_to_wkt
 from datetime import date
-api = SentinelAPI('iserra', 'Creaf-21', 'https://scihub.copernicus.eu/dhus')
-import rioxarray
+
 
 
 download_unzipped_path = os.path.join(os.getcwd(), 'unzipped')  #unzipped
