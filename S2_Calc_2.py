@@ -346,8 +346,14 @@ def _sos(vsos):
 
 vsos = _vsos(da,pos,method_sos="median")
 sos = _sos(vsos)
-
+print('sos')
+print(sos)
+#ndvi_cl.isel(time=0).rio.to_raster('ndvicl.tif',dtype="float32")
 sos.rio.to_raster('sos.tif',dtype="float32")
+
+print('vsos')
+print(vsos)
+vsos.rio.to_raster('vsos.tif',dtype="float32")
 
 def _veos(da, pos, method_eos="median"):
     """

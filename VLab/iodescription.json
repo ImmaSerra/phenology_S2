@@ -61,18 +61,9 @@
       "outputType": "individual",
       "valueType": "value",
       "description": "Output SOS image in TIFF format",
-      "name": "Output SOS image in TIFF format",
+      "name": "Output SOS image",
       "valueSchema": "url",
       "target": "sos.tif"
-    },
-    {
-      "id": "vsos.tif",
-      "outputType": "individual",
-      "valueType": "value",
-      "description": "Output POS image in TIFF format",
-      "name": "Output POS image in TIFF format",
-      "valueSchema": "url",
-      "target": "vsos.tif"
     }
   ]
 }
