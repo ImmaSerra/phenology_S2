@@ -69,8 +69,8 @@
       "id": "sos01",
       "outputType": "individual",
       "valueType": "value",
-      "description": "Output SOS image in TIFF format",
-      "name": "Output SOS image",
+      "description": "Output SOS DOY image in TIFF format",
+      "name": "Output SOS DOY image",
       "valueSchema": "url",
       "target": "sos.tif"
     },
@@ -87,8 +87,8 @@
       "id": "pos01",
       "outputType": "individual",
       "valueType": "value",
-      "description": "Output POS image in TIFF format",
-      "name": "Output POS image",
+      "description": "Output POS DOY image in TIFF format",
+      "name": "Output POS DOY image",
       "valueSchema": "url",
       "target": "pos.tif"
     },
@@ -105,8 +105,8 @@
       "id": "eos01",
       "outputType": "individual",
       "valueType": "value",
-      "description": "Output EOS image in TIFF format",
-      "name": "Output EOS image",
+      "description": "Output EOS DOY image in TIFF format",
+      "name": "Output EOS DOY image",
       "valueSchema": "url",
       "target": "eos.tif"
     },
