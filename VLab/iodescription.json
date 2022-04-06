@@ -38,7 +38,7 @@
         "inputType": "individual",
         "valueType": "value",
         "description": "Bounding Box (numbers separated by commas: west,south,east,north)",
-        "name": "Bounding Box ",
+        "name": "Bounding Box",
         "obligation": false,
         "hasDefault": true,
         "defaultValue": false,
@@ -79,7 +79,7 @@
       "outputType": "individual",
       "valueType": "value",
       "description": "Output VSOS image in TIFF format",
-      "name": "Output VSOS image in TIFF format",
+      "name": "Output VSOS image",
       "valueSchema": "url",
       "target": "vsos.tif"
     },
@@ -88,7 +88,7 @@
       "outputType": "individual",
       "valueType": "value",
       "description": "Output POS image in TIFF format",
-      "name": "Output POS image in TIFF format",
+      "name": "Output POS image",
       "valueSchema": "url",
       "target": "pos.tif"
     },
@@ -97,7 +97,7 @@
       "outputType": "individual",
       "valueType": "value",
       "description": "Output VPOS image in TIFF format",
-      "name": "Output VPOS image in TIFF format",
+      "name": "Output VPOS image",
       "valueSchema": "url",
       "target": "vpos.tif"
     },
@@ -106,7 +106,7 @@
       "outputType": "individual",
       "valueType": "value",
       "description": "Output EOS image in TIFF format",
-      "name": "Output EOS image in TIFF format",
+      "name": "Output EOS image",
       "valueSchema": "url",
       "target": "eos.tif"
     },
@@ -115,7 +115,7 @@
       "outputType": "individual",
       "valueType": "value",
       "description": "Output VEOS image in TIFF format",
-      "name": "Output VEOS image in TIFF format",
+      "name": "Output VEOS image",
       "valueSchema": "url",
       "target": "veos.tif"
     },
@@ -124,7 +124,7 @@
       "outputType": "individual",
       "valueType": "value",
       "description": "Plot - phenology statistics",
-      "name": "Plot",
+      "name": "Plot - phenology statistics",
       "valueSchema": "url",
       "target": "statsPheno.png"
     },
@@ -133,7 +133,7 @@
       "outputType": "individual",
       "valueType": "value",
       "description": "Plot - NDVI time-series",
-      "name": "Plot",
+      "name": "Plot - NDVI time-series",
       "valueSchema": "url",
       "target": "graph.png"
     }
