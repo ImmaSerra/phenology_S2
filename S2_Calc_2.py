@@ -20,6 +20,7 @@ import snappy_func as dp
 #files = dp2.queryS2('product_list_2019.txt')
 
 import datetime as dt
+from datetime import date
 
 import matplotlib.pyplot as plt
 #%matplotlib inline
@@ -32,7 +33,7 @@ from glob import glob
 #import urllib.request
 # connect to the API
 from sentinelsat import SentinelAPI, read_geojson, geojson_to_wkt
-from datetime import date
+
 
 
 
@@ -177,35 +178,21 @@ good_data = scl.where((scl == 4) | (scl == 5) | (scl == 6))
 #good_data
 ndvi_no_cloud = ndvi.where(good_data>=0)
 
-ndvi_sth=ndvi_no_cloud.rolling(time=1, min_periods=1, center=True).mean()
+#ndvi_sth=ndvi_no_cloud.rolling(time=1, min_periods=1, center=True).mean()
+ndvi_sth=ndvi_no_cloud.rolling(time=5, min_periods=1, center=True).mean()
+print(ndvi_sth)
 
 y=np.squeeze(ndvi_sth.values)
-
+print(y)
 ndvi_sth.coords
 
 x=ndvi_sth.coords['time'].values
-
+print(x)
 mask = ndvi_sth.isnull()
 #mask
 ndvi_cl = ndvi_sth.where(~mask, other=0)
 
-#ndvi_cl.isel(time=0).rio.to_raster('ndvicl.tif',dtype="float32")
-
-
-ndvi_sth=ndvi_no_cloud.rolling(time=5, min_periods=1, center=True).mean()
-print(ndvi_sth)
-
-
-y=np.squeeze(ndvi_sth.values)
-print(y)
-
-x=ndvi_sth.coords['time'].values
-print(x)
-
-mask = ndvi_sth.isnull()
-
-ndvi_cl = ndvi_sth.where(~mask, other=0)
-#ndvi_cl
+ndvi_cl.isel(time=0).rio.to_raster('ndvicl.tif',dtype="float32")
 
 #vSOS = Value at the start of season
 # select timesteps before peak of season (AKA greening)
@@ -260,11 +247,11 @@ def allNaN_arg(da, dim, stat):
 
 # find index (argmin) where distance is most negative
 idx = allNaN_arg(distance, "time", "min").astype("int16")
-idx
+#idx
 
 # find index (argmin) where distance is smallest absolute value
 idx = allNaN_arg(xr.ufuncs.fabs(distance), "time", "min").astype("int16")
-idx.values
+#idx.values
 
 
 def _vpos(da):
@@ -286,6 +273,11 @@ print("      Phenology...")
 vpos = _vpos(da)
 pos = _pos(da)
 
+print('pos')
+print(pos)
+
+pos.rio.to_raster('pos.tif',dtype="float32")
+vpos.rio.to_raster('vpos.tif',dtype="float32")
 
 def _trough(da):
     """
@@ -348,7 +340,7 @@ vsos = _vsos(da,pos,method_sos="median")
 sos = _sos(vsos)
 print('sos')
 print(sos)
-#ndvi_cl.isel(time=0).rio.to_raster('ndvicl.tif',dtype="float32")
+
 sos.rio.to_raster('sos.tif',dtype="float32")
 
 print('vsos')
@@ -402,6 +394,8 @@ def _eos(veos):
 veos = _veos(da, pos, method_eos="median")
 eos = _eos(veos)
 
+eos.rio.to_raster('eos.tif',dtype="float32")
+veos.rio.to_raster('veos.tif',dtype="float32")
 
 def _los(da, eos, sos):
     """
@@ -509,7 +503,7 @@ stats_dict['vEOS'].plot(ax=ax[2, 1],
                cbar_kwargs=dict(shrink=cbar_size, label=None))
 ax[2, 1].set_title('NDVI' + ' at EOS')
 
-fig.savefig('Stats.png')
+fig.savefig('statsPheno.png')
 
 nd = ndvi_cl.mean(dim=['x', 'y'])
 
@@ -525,11 +519,16 @@ sos_dt = dt.datetime.strptime(year + str(sos_nd.values), '%Y %j')  #stats_dict['
 pos_dt = dt.datetime.strptime(year + str(pos_nd.values), '%Y %j')  #stats_dict['POS']
 eos_dt = dt.datetime.strptime(year + str(eos_nd.values), '%Y %j')  #stats_dict['EOS'] zonal_phen.EOS.values
 
+print('phenology metrics')
+print('SOS_t:', sos_dt),print('POS_t:', pos_dt),print('EOS_t:',eos_dt),print('SOS DOY:',sos_nd.values),print('POS DOY:',pos_nd.values),print('VEOS DOY:',eos_nd.values),print('VSOS value:',vsos_nd.values),print('VPOS value:',vpos_nd.values),print('VEOS values:',veos_nd.values)
+
+
+
 # Create plot
 fig, ax = plt.subplots(figsize=(11, 4))
 #ax.plot(veg_rolling.time, veg_rolling, 'b-^')
 #ax.plot(ndvi_sth.time,ndvi_sth.mean(dim=['x', 'y']),'b-^')
-ax.plot(ndvi_cl.time,ndvi_cl.mean(dim=['x', 'y']),'b-^')
+ax.plot(ndvi_cl.time,ndvi_cl.mean(dim=['x', 'y']),'g-^')
 #ndvi_sth.mean(['x', 'y'])
 
 # Add start of season

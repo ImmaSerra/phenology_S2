@@ -57,13 +57,85 @@
       "target": "./output.txt"
     },
     {
-      "id": "sos.tif",
+      "id": "ndvicl01",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output NDVI_no_cloud image in TIFF format",
+      "name": "Output NDVI_no_cloud image",
+      "valueSchema": "url",
+      "target": "ndvicl.tif"
+    },
+    {
+      "id": "sos01",
       "outputType": "individual",
       "valueType": "value",
       "description": "Output SOS image in TIFF format",
       "name": "Output SOS image",
       "valueSchema": "url",
       "target": "sos.tif"
+    },
+    {
+      "id": "vsos01",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output VSOS image in TIFF format",
+      "name": "Output VSOS image in TIFF format",
+      "valueSchema": "url",
+      "target": "vsos.tif"
+    },
+    {
+      "id": "pos01",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output POS image in TIFF format",
+      "name": "Output POS image in TIFF format",
+      "valueSchema": "url",
+      "target": "pos.tif"
+    },
+    {
+      "id": "vpos01",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output VPOS image in TIFF format",
+      "name": "Output VPOS image in TIFF format",
+      "valueSchema": "url",
+      "target": "vpos.tif"
+    },
+    {
+      "id": "eos01",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output EOS image in TIFF format",
+      "name": "Output EOS image in TIFF format",
+      "valueSchema": "url",
+      "target": "eos.tif"
+    },
+    {
+      "id": "veos01",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output VEOS image in TIFF format",
+      "name": "Output VEOS image in TIFF format",
+      "valueSchema": "url",
+      "target": "veos.tif"
+    },
+    {
+      "id": "graphic01",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Plot - phenology statistics",
+      "name": "Plot",
+      "valueSchema": "url",
+      "target": "statsPheno.png"
+    },
+    {
+      "id": "graphic02",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Plot - NDVI time-series",
+      "name": "Plot",
+      "valueSchema": "url",
+      "target": "graph.png"
     }
   ]
 }
