@@ -187,6 +187,7 @@ print(y)
 ndvi_sth.coords
 
 x=ndvi_sth.coords['time'].values
+#x.sort(axis=0)
 print(x)
 mask = ndvi_sth.isnull()
 #mask
@@ -213,6 +214,8 @@ print(median)
 # distance of values from median
 distance = pos_greenup - median
 print(distance)
+
+da = ndvi_cl
 
 
 def allNaN_arg(da, dim, stat):
@@ -266,10 +269,9 @@ def _pos(da):
     """
     return da.isel(time=da.argmax("time")).time.dt.dayofyear
 
-da = ndvi_cl
 
 # calculate the statistics
-print("      Phenology...")
+print("Phenology")
 vpos = _vpos(da)
 pos = _pos(da)
 
@@ -511,6 +513,7 @@ vpos_nd = _vpos(nd)
 pos_nd = _pos(nd)
 veos_nd = _veos(nd,pos_nd,method_eos="median")
 eos_nd = _eos(veos_nd)
+
 vsos_nd = _vsos(nd,pos_nd,method_sos="median")
 sos_nd = _sos(vsos_nd)
 
@@ -520,7 +523,7 @@ pos_dt = dt.datetime.strptime(year + str(pos_nd.values), '%Y %j')  #stats_dict['
 eos_dt = dt.datetime.strptime(year + str(eos_nd.values), '%Y %j')  #stats_dict['EOS'] zonal_phen.EOS.values
 
 print('phenology metrics')
-print('SOS_t:', sos_dt),print('POS_t:', pos_dt),print('EOS_t:',eos_dt),print('SOS DOY:',sos_nd.values),print('POS DOY:',pos_nd.values),print('VEOS DOY:',eos_nd.values),print('VSOS value:',vsos_nd.values),print('VPOS value:',vpos_nd.values),print('VEOS values:',veos_nd.values)
+print('SOS_t:', sos_dt),print('POS_t:', pos_dt),print('EOS_t:',eos_dt),print('SOS DOY:',sos_nd.values),print('POS DOY:',pos_nd.values),print('VEOS DOY:',eos_nd.values),print('VSOS value:',vsos_nd.values),print('VPOS value:',vpos_nd.values),print('VEOS value:',veos_nd.values)
 
 
 
