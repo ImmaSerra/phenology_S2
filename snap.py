@@ -116,7 +116,8 @@ products_df = api.to_dataframe(products)
 #print(products_df)
 
 # sort and limit to first 1 sorted products
-products_df_sorted = products_df.sort_values(['cloudcoverpercentage', 'ingestiondate'], ascending=[True, True])
+#products_df_sorted = products_df.sort_values(['cloudcoverpercentage', 'ingestiondate'], ascending=[True, True])
+products_df_sorted = products_df.sort_values(['ingestiondate'], ascending=[True])
 #products_df_sorted = products_df_sorted.head(2)
 
 

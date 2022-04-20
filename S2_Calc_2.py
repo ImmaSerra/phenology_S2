@@ -187,7 +187,7 @@ print(y)
 ndvi_sth.coords
 
 x=ndvi_sth.coords['time'].values
-#x.sort(axis=0)
+x.sort(axis=0)
 print(x)
 mask = ndvi_sth.isnull()
 #mask
