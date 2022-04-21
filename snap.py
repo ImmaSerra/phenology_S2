@@ -92,15 +92,23 @@ products = api.query(footprint,
 
 print(len(products))
 
+if not os.path.exists('output'):
+    os.makedir('output')
+
 output = "output.txt"
 
-with open(output, "w") as outputfile:
-    for i in products:
-        #print (i,api.get_product_odata(i)['title'],api.get_product_odata(i)['url'])
-        #print (api.get_product_odata(i)['url'])
-        print (api.get_product_odata(i)['title'])
-        #print (api.get_product_odata(i)['url'])
-        outputfile.write(str(api.get_product_odata(i)['title'])+'\n')
+outputfile = os.path.join('output', output)
+
+#with open(output, "w") as outputfile:
+f.open(outputfile, "w")
+for i in products:
+    #print (i,api.get_product_odata(i)['title'],api.get_product_odata(i)['url'])
+    #print (api.get_product_odata(i)['url'])
+    print (api.get_product_odata(i)['title'])
+    #print (api.get_product_odata(i)['url'])
+    #outputfile.write(str(api.get_product_odata(i)['title'])+'\n')
+    f.write(str(api.get_product_odata(i)['title'])+'\n')
+f.close()
 
 #with open(output, "w") as outputfile:
 #    outputfile.write(str(len(products)))

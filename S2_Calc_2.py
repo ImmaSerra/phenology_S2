@@ -198,7 +198,7 @@ mask = ndvi_sth.isnull()
 #mask
 ndvi_cl = ndvi_sth.where(~mask, other=0)
 
-ndvi_cl.isel(time=0).rio.to_raster('ndvicl.tif',dtype="float32")
+os.path.join('output',ndvi_cl.isel(time=0).rio.to_raster('ndvicl.tif',dtype="float32"))
 
 #vSOS = Value at the start of season
 # select timesteps before peak of season (AKA greening)
@@ -401,8 +401,8 @@ def _eos(veos):
 veos = _veos(da, pos, method_eos="median")
 eos = _eos(veos)
 
-eos.rio.to_raster('eos.tif',dtype="float32")
-veos.rio.to_raster('veos.tif',dtype="float32")
+os.path.join('output',eos.rio.to_raster('eos.tif',dtype="float32"))
+os.path.join('output',veos.rio.to_raster('veos.tif',dtype="float32"))
 
 def _los(da, eos, sos):
     """
@@ -562,4 +562,4 @@ ax.annotate('EOS',
             textcoords='offset points',
             arrowprops=dict(arrowstyle='-|>'))
 
-fig.savefig('graph.png')
+os.path.join('output',fig.savefig('graph.png'))

@@ -54,52 +54,7 @@
       "description": "The output file",
       "name": "Output.txt",
       "valueSchema": "url",
-      "target": "./output.txt"
-    },
-    {
-      "id": "ndvicl01",
-      "outputType": "individual",
-      "valueType": "value",
-      "description": "Output NDVI_no_cloud image in TIFF format",
-      "name": "Output NDVI_no_cloud image.tif",
-      "valueSchema": "url",
-      "target": "output/ndvicl.tif"
-    },
-    {
-      "id": "sos01",
-      "outputType": "individual",
-      "valueType": "value",
-      "description": "Output SOS DOY image in TIFF format",
-      "name": "Output SOS DOY image.tif",
-      "valueSchema": "url",
-      "target": "output/sos.tif"
-    },
-    {
-      "id": "vsos01",
-      "outputType": "individual",
-      "valueType": "value",
-      "description": "Output VSOS image in TIFF format",
-      "name": "Output VSOS image.tif",
-      "valueSchema": "url",
-      "target": "output/vsos.tif"
-    },
-    {
-      "id": "pos01",
-      "outputType": "individual",
-      "valueType": "value",
-      "description": "Output POS DOY image in TIFF format",
-      "name": "Output POS DOY image.tif",
-      "valueSchema": "url",
-      "target": "output/pos.tif"
-    },
-    {
-      "id": "vpos01",
-      "outputType": "individual",
-      "valueType": "value",
-      "description": "Output VPOS image in TIFF format.tif",
-      "name": "Output VPOS image.tif",
-      "valueSchema": "url",
-      "target": "vpos.tif"
+      "target": "output/output.txt"
     },
     {
       "id": "eos01",
@@ -108,7 +63,7 @@
       "description": "Output EOS DOY image in TIFF format.tif",
       "name": "Output EOS DOY image.tif",
       "valueSchema": "url",
-      "target": "eos.tif"
+      "target": "output/eos.tif"
     },
     {
       "id": "veos01",
@@ -118,24 +73,6 @@
       "name": "Output VEOS image.tif",
       "valueSchema": "url",
       "target": "output/veos.tif"
-    },
-    {
-      "id": "graphic01",
-      "outputType": "individual",
-      "valueType": "value",
-      "description": "Plot - phenology statistics.png",
-      "name": "Plot - phenology statistics.png",
-      "valueSchema": "url",
-      "target": "output/statsPheno.png"
-    },
-    {
-      "id": "graphic02",
-      "outputType": "individual",
-      "valueType": "value",
-      "description": "Plot - NDVI time-series.png",
-      "name": "Plot - NDVI time-series.png",
-      "valueSchema": "url",
-      "target": "output/graph.png"
     }
   ]
 }
