@@ -85,6 +85,11 @@ def get_bounding_box(geometry):
 
 #time_var = xr.Variable('time', dp.paths_to_datetimeindex(redlist))
 #print(time_var)
+
+if not os.path.exists('output'):
+    os.makedir('output')
+
+
 """
 nirlist= []
 redlist= []

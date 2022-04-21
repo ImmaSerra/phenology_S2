@@ -63,7 +63,7 @@
       "description": "Output NDVI_no_cloud image in TIFF format",
       "name": "Output NDVI_no_cloud image.tif",
       "valueSchema": "url",
-      "target": "ndvicl.tif"
+      "target": "output/ndvicl.tif"
     },
     {
       "id": "sos01",
@@ -72,7 +72,7 @@
       "description": "Output SOS DOY image in TIFF format",
       "name": "Output SOS DOY image.tif",
       "valueSchema": "url",
-      "target": "sos.tif"
+      "target": "output/sos.tif"
     },
     {
       "id": "vsos01",
@@ -81,7 +81,7 @@
       "description": "Output VSOS image in TIFF format",
       "name": "Output VSOS image.tif",
       "valueSchema": "url",
-      "target": "vsos.tif"
+      "target": "output/vsos.tif"
     },
     {
       "id": "pos01",
@@ -90,7 +90,7 @@
       "description": "Output POS DOY image in TIFF format",
       "name": "Output POS DOY image.tif",
       "valueSchema": "url",
-      "target": "pos.tif"
+      "target": "output/pos.tif"
     },
     {
       "id": "vpos01",
@@ -117,7 +117,7 @@
       "description": "Output VEOS image in TIFF format.tif",
       "name": "Output VEOS image.tif",
       "valueSchema": "url",
-      "target": "veos.tif"
+      "target": "output/veos.tif"
     },
     {
       "id": "graphic01",
@@ -126,7 +126,7 @@
       "description": "Plot - phenology statistics.png",
       "name": "Plot - phenology statistics.png",
       "valueSchema": "url",
-      "target": "statsPheno.png"
+      "target": "output/statsPheno.png"
     },
     {
       "id": "graphic02",
@@ -135,7 +135,7 @@
       "description": "Plot - NDVI time-series.png",
       "name": "Plot - NDVI time-series.png",
       "valueSchema": "url",
-      "target": "graph.png"
+      "target": "output/graph.png"
     }
   ]
 }
