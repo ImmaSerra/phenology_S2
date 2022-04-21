@@ -100,7 +100,7 @@ output = "output.txt"
 outputfile = os.path.join('output', output)
 
 #with open(output, "w") as outputfile:
-f.open(outputfile, "w")
+f = open(outputfile, "w")
 for i in products:
     #print (i,api.get_product_odata(i)['title'],api.get_product_odata(i)['url'])
     #print (api.get_product_odata(i)['url'])
