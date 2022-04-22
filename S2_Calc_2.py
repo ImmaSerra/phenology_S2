@@ -199,7 +199,7 @@ mask = ndvi_sth.isnull()
 ndvi_cl = ndvi_sth.where(~mask, other=0)
 
 path_out  = os.path.join(os.getcwd(), 'output')
-ndvi_cl.isel(time=0).rio.to_raster(os.path.join(path_out,'ndvicl.tif',dtype="float32")
+ndvi_cl.isel(time=0).rio.to_raster(os.path.join(path_out,'ndvicl.tif',dtype="float32"))
 
 #vSOS = Value at the start of season
 # select timesteps before peak of season (AKA greening)
