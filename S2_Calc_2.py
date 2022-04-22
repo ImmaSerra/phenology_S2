@@ -199,7 +199,7 @@ mask = ndvi_sth.isnull()
 ndvi_cl = ndvi_sth.where(~mask, other=0)
 
 path_out  = os.path.join(os.getcwd(), 'output')
-ndvi_cl.isel(time=0).rio.to_raster(os.path.join(path_out,'ndvicl.tif',dtype="float32"))
+ndvi_cl.isel(time=0).rio.to_raster(os.path.join(path_out,'ndvicl.tif'),dtype="float32")
 
 #vSOS = Value at the start of season
 # select timesteps before peak of season (AKA greening)
@@ -285,9 +285,9 @@ print('pos')
 print(pos)
 
 #pos.rio.to_raster('pos.tif',dtype="float32")
-pos.rio.to_raster(os.path.join(path_out,'pos.tif',dtype="float32"))
+pos.rio.to_raster(os.path.join(path_out,'pos.tif'),dtype="float32")
 #vpos.rio.to_raster('vpos.tif',dtype="float32")
-vpos.rio.to_raster(os.path.join(path_out,'vpos.tif',dtype="float32"))
+vpos.rio.to_raster(os.path.join(path_out,'vpos.tif'),dtype="float32")
 
 def _trough(da):
     """
@@ -352,12 +352,12 @@ print('sos')
 print(sos)
 
 #sos.rio.to_raster('sos.tif',dtype="float32")
-sos.rio.to_raster(os.path.join(path_out,'sos.tif',dtype="float32"))
+sos.rio.to_raster(os.path.join(path_out,'sos.tif'),dtype="float32")
 
 print('vsos')
 print(vsos)
 #vsos.rio.to_raster('vsos.tif',dtype="float32")
-vsos.rio.to_raster(os.path.join(path_out,'vsos.tif',dtype="float32"))
+vsos.rio.to_raster(os.path.join(path_out,'vsos.tif'),dtype="float32")
 
 def _veos(da, pos, method_eos="median"):
     """
@@ -407,9 +407,9 @@ veos = _veos(da, pos, method_eos="median")
 eos = _eos(veos)
 
 #os.path.join('output',eos.rio.to_raster('eos.tif',dtype="float32"))
-eos.rio.to_raster(os.path.join(path_out,'eos.tif',dtype="float32"))
+eos.rio.to_raster(os.path.join(path_out,'eos.tif'),dtype="float32")
 #os.path.join('output',veos.rio.to_raster('veos.tif',dtype="float32"))
-veos.rio.to_raster(os.path.join(path_out,'veos.tif',dtype="float32"))
+veos.rio.to_raster(os.path.join(path_out,'veos.tif'),dtype="float32")
 
 def _los(da, eos, sos):
     """
