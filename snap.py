@@ -93,7 +93,7 @@ products = api.query(footprint,
 print(len(products))
 
 if not os.path.exists('output'):
-    os.makedir('output')
+    os.makedirs('output')
 
 output = "output.txt"
 
