@@ -517,7 +517,8 @@ stats_dict['vEOS'].plot(ax=ax[2, 1],
                cbar_kwargs=dict(shrink=cbar_size, label=None))
 ax[2, 1].set_title('NDVI' + ' at EOS')
 
-fig.savefig('statsPheno.png')
+#fig.savefig('statsPheno.png')
+fig.savefig(os.path.join(path_out,'statsPheno.png'))
 
 nd = ndvi_cl.mean(dim=['x', 'y'])
 
@@ -569,4 +570,4 @@ ax.annotate('EOS',
             textcoords='offset points',
             arrowprops=dict(arrowstyle='-|>'))
 
-os.path.join('output',fig.savefig('graph.png'))
+fig.savefig(os.path.join(path_out,'graph.png'))

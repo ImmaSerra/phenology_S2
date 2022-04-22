@@ -73,6 +73,24 @@
       "name": "Output VEOS image.tif",
       "valueSchema": "url",
       "target": "output/veos.tif"
+    },
+    {
+      "id": "graphic01",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Plot - phenology statistics.png",
+      "name": "Plot - phenology statistics.png",
+      "valueSchema": "url",
+      "target": "output/statsPheno.png"
+    },
+    {
+      "id": "graphic02",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Plot - NDVI time-series.png",
+      "name": "Plot - NDVI time-series.png",
+      "valueSchema": "url",
+      "target": "output/graph.png"
     }
   ]
 }
