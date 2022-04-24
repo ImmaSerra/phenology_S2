@@ -60,8 +60,8 @@
       "id": "eos01",
       "outputType": "individual",
       "valueType": "value",
-      "description": "Output EOS DOY image in TIFF format.tif",
-      "name": "Output EOS DOY image.tif",
+      "description": "Output EOS DOY image in TIFF",
+      "name": "Output EOS DOY image in TIFF",
       "valueSchema": "url",
       "target": "output/eos.tif"
     },
@@ -69,8 +69,8 @@
       "id": "veos01",
       "outputType": "individual",
       "valueType": "value",
-      "description": "Output VEOS image in TIFF format.tif",
-      "name": "Output VEOS image.tif",
+      "description": "Output VEOS image in TIFF",
+      "name": "Output VEOS image in TIFF",
       "valueSchema": "url",
       "target": "output/veos.tif"
     },
@@ -78,8 +78,8 @@
       "id": "graphic01",
       "outputType": "individual",
       "valueType": "value",
-      "description": "Plot - phenology statistics.png",
-      "name": "Plot - phenology statistics.png",
+      "description": "Plot - phenology statistics png",
+      "name": "Plot - phenology statistics png",
       "valueSchema": "url",
       "target": "output/statsPheno.png"
     },
@@ -87,8 +87,8 @@
       "id": "graphic02",
       "outputType": "individual",
       "valueType": "value",
-      "description": "Plot - NDVI time-series.png",
-      "name": "Plot - NDVI time-series.png",
+      "description": "Plot - NDVI time-series png",
+      "name": "Plot - NDVI time-series png",
       "valueSchema": "url",
       "target": "output/graph.png"
     }
