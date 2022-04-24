@@ -90,7 +90,7 @@
       "description": "Output VPOS image in TIFF",
       "name": "Output VPOS image in TIFF",
       "valueSchema": "url",
-      "target": "vpos.tif"
+      "target": "output/vpos.tif"
     },
     {
       "id": "eos01",
