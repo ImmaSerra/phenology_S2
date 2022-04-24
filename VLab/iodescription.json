@@ -57,6 +57,42 @@
       "target": "output/output.txt"
     },
     {
+      "id": "sos01",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output SOS DOY image in TIFF",
+      "name": "Output SOS DOY image in TIFF",
+      "valueSchema": "url",
+      "target": "output/sos.tif"
+    },
+    {
+      "id": "vsos01",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output VSOS image in TIFF",
+      "name": "Output VSOS image in TIFF",
+      "valueSchema": "url",
+      "target": "output/vsos.tif"
+    },
+    {
+      "id": "pos01",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output POS DOY image in TIFF",
+      "name": "Output POS DOY image in TIFF",
+      "valueSchema": "url",
+      "target": "output/pos.tif"
+    },
+    {
+      "id": "vpos01",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output VPOS image in TIFF",
+      "name": "Output VPOS image in TIFF",
+      "valueSchema": "url",
+      "target": "vpos.tif"
+    },
+    {
       "id": "eos01",
       "outputType": "individual",
       "valueType": "value",
