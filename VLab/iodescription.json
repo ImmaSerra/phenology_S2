@@ -57,7 +57,7 @@
       "target": "output/output.txt"
     },
     {
-      "id": "sos01",
+      "id": "DataObject_output1",
       "outputType": "individual",
       "valueType": "value",
       "description": "Output SOS DOY image in TIFF",
@@ -66,7 +66,7 @@
       "target": "output/sos.tif"
     },
     {
-      "id": "vsos01",
+      "id": "DataObject_output2",
       "outputType": "individual",
       "valueType": "value",
       "description": "Output VSOS image in TIFF",
@@ -75,7 +75,7 @@
       "target": "output/vsos.tif"
     },
     {
-      "id": "pos01",
+      "id": "DataObject_output3",
       "outputType": "individual",
       "valueType": "value",
       "description": "Output POS DOY image in TIFF",
@@ -84,7 +84,7 @@
       "target": "output/pos.tif"
     },
     {
-      "id": "vpos01",
+      "id": "DataObject_output4",
       "outputType": "individual",
       "valueType": "value",
       "description": "Output VPOS image in TIFF",
@@ -93,7 +93,7 @@
       "target": "output/vpos.tif"
     },
     {
-      "id": "eos01",
+      "id": "DataObject_output5",
       "outputType": "individual",
       "valueType": "value",
       "description": "Output EOS DOY image in TIFF",
@@ -102,7 +102,7 @@
       "target": "output/eos.tif"
     },
     {
-      "id": "veos01",
+      "id": "DataObject_output6",
       "outputType": "individual",
       "valueType": "value",
       "description": "Output VEOS image in TIFF",
@@ -111,7 +111,7 @@
       "target": "output/veos.tif"
     },
     {
-      "id": "graphic01",
+      "id": "DataObject_output7",
       "outputType": "individual",
       "valueType": "value",
       "description": "Plot - phenology statistics png",
@@ -120,7 +120,7 @@
       "target": "output/statsPheno.png"
     },
     {
-      "id": "graphic02",
+      "id": "DataObject_output8",
       "outputType": "individual",
       "valueType": "value",
       "description": "Plot - NDVI time-series png",
